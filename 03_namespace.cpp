@@ -1,12 +1,13 @@
 #include <iostream>
+using namespace std;
 //! Namespace
 namespace first
 {
-    std::string x = "this is the first namespace\n";
+    string x = "this is the first namespace\n";
 }
 namespace second
 {
-    std::string x = "this is the second namespace\n";
+    string x = "this is the second namespace\n";
 
 }
 
@@ -18,14 +19,11 @@ int main()
     // different.
     using namespace second; // if scope not specified it will default to the second
 
-    std::cout << first::x; // the value of x in the first namespace
+    cout << first::x; // the value of x in the first namespace
 
-    std::cout << second::x; // the value of x in the second namespace
+    cout << second::x; // the value of x in the second namespace
 
-    std::cout << x; // will default to second
-
-    using std::cout;   // allows shorthand
-    using std::string; // allows shorthand
+    cout << x; // will default to second
 
     cout << "'using std::cout' allows short-hand print statements\n";
     string shortHand = "'using std::string' allows for shorthand string statements\n";

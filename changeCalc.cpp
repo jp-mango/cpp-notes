@@ -27,5 +27,7 @@ int main()
     cout << "Dimes: " << dimes << endl;
     cout << "Nickels: " << nickels << endl;
     cout << "Pennies: " << pennies << endl;
+
+    cin.get(); // waits for user input
     return 0;
 }

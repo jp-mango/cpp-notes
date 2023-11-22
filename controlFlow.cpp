@@ -73,5 +73,14 @@ int main()
         cout << "should never execute";
     }
     cout << endl;
-    return 0;
+
+    cout << "----- Ternary Operator -----" << endl;
+    int a{10}, b{20};
+    int score{92};
+    int result{};
+
+    result = (a > b) ? a : b; // if (a < b) is true then it returns a. If false, b is returned
+    cout << "Since " << a << " is smaller than " << b << ". The statement '(a > b) ? a : b;' will return b: " << result << endl;
+
+    cout << "Since score is " << score << ". This evaluation ((score > 90) ? 'Excellent' : 'Good') will return 'Excellent'" << endl;
 }

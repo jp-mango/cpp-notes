@@ -61,7 +61,22 @@ int main()
     {
         cout << temp << " ";
     }
+    cout << endl;
     // While Loops - iterates while a condition remains true, check condition at the BEGINNING the next iteration
-
+    cout << "\n----- While Loops ----- " << endl;
+    cout << "\n - Example 1: " << endl;
+    cout << "int e{1};" << endl;
+    cout << "while (e <= 5)" << endl;
+    cout << "{" << endl;
+    cout << "\tcout << e << \" \";" << endl;
+    cout << "\te++;" << endl;
+    cout << "}" << endl;
+    cout << " - Output 1: " << endl;
+    int e{1};
+    while (e <= 5)
+    {
+        cout << e << " ";
+        e++; // loop will be infinite without increment
+    }
     // Do-While Loop - iterates while the condition remains true, checks condition at the END of every iteration
 }

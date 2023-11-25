@@ -78,5 +78,23 @@ int main()
         cout << e << " ";
         e++; // loop will be infinite without increment
     }
+    cout << endl;
     // Do-While Loop - iterates while the condition remains true, checks condition at the END of every iteration
+    cout << "\n----- Do-While Loops ----- " << endl;
+    cout << "\n - Example 1: " << endl;
+    cout << "int number{};" << endl;
+    cout << "do" << endl;
+    cout << "{" << endl;
+    cout << "\tcout << \"Enter an integer between 1 and 5: \";" << endl;
+    cout << "\tcin >> number" << endl;
+    cout << "} while (number <= 1 || number >= 5);" << endl;
+    cout << "cout << \"Thanks.\" << endl;" << endl;
+    cout << "\n - Output 1: " << endl;
+    int number{}; // must be declared outside of the loop if used in loop condition
+    do
+    {
+        cout << "Enter an integer between 1 and 5: ";
+        cin >> number;
+    } while (number <= 1 || number >= 5);
+    cout << "Thanks." << endl;
 }

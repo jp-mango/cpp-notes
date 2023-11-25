@@ -97,4 +97,23 @@ int main()
         cin >> number;
     } while (number <= 1 || number >= 5);
     cout << "Thanks." << endl;
+    // Continue - no further statements in the loop are executed and the loop restarts
+    // Break - no further statements in the loop are executed and the loop ends
+    cout << "\n----- Continue & Break ----- " << endl;
+    vector<int> value{1, 2, -1, 3, -1, -99, 7, 8, 10};
+    for (auto val : value)
+    {
+        if (val == -99)
+        {
+            break;
+        }
+        else if (val == -1)
+        {
+            continue;
+        }
+        else
+        {
+            cout << val << endl;
+        }
+    }
 }

@@ -1,6 +1,7 @@
 /**
-#include <iostream>
 #include <iomanip>
+#include <iostream>
+
 
 int main() {
     int a = 5;
@@ -19,6 +20,8 @@ int main() {
 
     return 0;
 }
- * @brief This code demonstrates how to test for equality using the == and != operators.
- *        It also shows how to use boolalpha and noboolalpha to control the output format of boolean values.
+ * @brief This code demonstrates how to test for equality using the == and !=
+operators.
+ *        It also shows how to use boolalpha and noboolalpha to control the
+output format of boolean values.
  */

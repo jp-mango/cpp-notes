@@ -72,9 +72,6 @@ int main() {
        << endl;
   cout << "isspace(" << spaceChar << ") returns: " << isspace(spaceChar)
        << endl;
-#include <cstring> // for strcpy
-
-  // ...
 
   // Strings - constant and terminated w/ null char
   cout << "\n ----- C Strings: -----" << endl;

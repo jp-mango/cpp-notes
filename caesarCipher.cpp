@@ -1,0 +1,35 @@
+#include <cctype>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  // encryption or decryption
+  cout << "Would you like to [e]ncrypt or [d]ecrypt? " << endl;
+  string choice{};
+  getline(cin, choice);
+
+  // shift value
+  cout << "What is the shift value? " << endl;
+  string shiftStr{};
+  getline(cin, shiftStr);
+  int shift = stoi(shiftStr);
+
+  // phrase
+  cout << "Enter the phrase that you want to "
+       << ((choice == "e") ? "encrypt" : "decrypt") << ": \n";
+  string phrase{};
+  getline(cin, phrase);
+
+  // encrypt/ decrypt loop
+  for (size_t i{0}; i < phrase.size(); i++) {
+    if (choice == "e") {
+      phrase[i] += shift;
+    } else {
+      phrase[i] -= shift;
+    }
+  }
+  cout << "Result: " << phrase;
+  return 0;
+}

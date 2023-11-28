@@ -1,8 +1,13 @@
+#include <cctype>
 #include <iostream>
+#include <string>
+
 #include <vector>
+
 using namespace std;
 
 int main() {
-  vector<int> vec = {2, 4, 6, 8};
-  cout << vec.size();
+  char letter{'a'};
+  char newLetter = letter + 1;
+  return 0;
 }

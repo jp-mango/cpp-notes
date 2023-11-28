@@ -23,11 +23,15 @@ int main() {
   getline(cin, phrase);
 
   // encrypt/ decrypt loop
-  for (size_t i{0}; i < phrase.size(); i++) {
-    if (choice == "e") {
-      phrase[i] += shift;
-    } else {
-      phrase[i] -= shift;
+  for (size_t i = 0; i < phrase.size(); i++) {
+    if (isalpha(phrase[i])) {
+      char base = islower(phrase[i]) ? 'a' : 'A';
+      int offset = phrase[i] - base;
+      if (choice == "e") {
+        phrase[i] = base + (offset + shift + 26) % 26;
+      } else {
+        phrase[i] = base + (offset - shift + 26) % 26;
+      }
     }
   }
   cout << "Result: " << phrase;

@@ -28,9 +28,9 @@ int main() {
       char base = islower(phrase[i]) ? 'a' : 'A';
       int offset = phrase[i] - base;
       if (choice == "e") {
-        phrase[i] = base + (offset + shift + 26) % 26;
+        phrase[i] = base + (offset + shift + 26) % 26; // encrypts
       } else {
-        phrase[i] = base + (offset - shift + 26) % 26;
+        phrase[i] = base + (offset - shift + 26) % 26; // decrypts
       }
     }
   }

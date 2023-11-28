@@ -163,5 +163,9 @@ int main() {
   cout << "Enter 2 sentences, separated with a period: ";
   string phrase{};
   getline(cin, phrase, '.'); // Will output first sentence
+
+  //.insert() - is used to insert into strings at a specific index
+  string noSpaceName{"JustinMenzies"};
+  string spaceName = noSpaceName.insert(6, " "); // Justin Menzies
   return 0;
 }

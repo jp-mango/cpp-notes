@@ -3,6 +3,7 @@
 using namespace std;
 
 const double pi{3.14159};
+
 double calcAreaCircle(double radius) { return pi * radius * radius; }
 
 void areaCircle() {

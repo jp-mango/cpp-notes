@@ -154,9 +154,9 @@ int main() {
   int scoreList[]{100, 95, 89, 68, -1};
   int *scoreList_ptr{scoreList};
 
-  while (*scoreList_ptr != 89) { // loops through the array until -1 is seen
-    cout << *scoreList_ptr << " ";
-    scoreList_ptr++;
+  while (*scoreList_ptr != -1) { // loops through the array until -1 is seen
+    cout << *scoreList_ptr++
+         << " "; // dereferences and increments the pointer: [100, 95, 89, 68]
   }
 
   return 0;

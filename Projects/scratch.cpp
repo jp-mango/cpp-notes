@@ -2,12 +2,11 @@
 #include <iostream>
 #include <string>
 
-#include <vector>
-
 using namespace std;
 
 int main() {
-  char letter{'a'};
+  char letter{'h'};
   char newLetter = letter + 1;
+  cout << letter << " " << newLetter;
   return 0;
 }

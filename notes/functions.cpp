@@ -42,11 +42,11 @@ int main() {
 
 // add function with default argument
 // If the second argument is not provided, it defaults to 10
-int add(int a, int b) { return a + b; }
+int add1(int a, int b) { return a + b; }
 
 // Overloaded add function with three parameters
 // Different number of parameters allows for function overloading
-int add(int a, int b, int c) { return a + b + c; }
+int add2(int a, int b, int c) { return a + b + c; }
 
 // Function to print elements of an array
 // The array is passed as a pointer (int arr[]) and size is also passed

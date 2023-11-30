@@ -5,57 +5,56 @@
 using namespace std;
 // A pointer stores the memory address of another variable
 int main() {
-  std::cout << "Pointer Notes\n" << std::endl;
+  cout << "Pointer Notes\n" << endl;
 
-  std::cout
+  cout
       << "1. Definition:\n"
       << "   - A pointer in C++ is a variable that stores the memory address "
          "of another variable.\n"
       << "   - It 'points' to the location in memory where data is stored.\n\n";
 
-  std::cout << "2. Syntax:\n"
-            << "   - Declare a pointer with the asterisk (*) symbol. For "
-               "example: int* ptr;\n"
-            << "   - The type of the pointer indicates the type of the "
-               "variable it points to.\n\n";
+  cout << "2. Syntax:\n"
+       << "   - Declare a pointer with the asterisk (*) symbol. For "
+          "example: int* ptr;\n"
+       << "   - The type of the pointer indicates the type of the "
+          "variable it points to.\n\n";
+  cout << "3. Initialization:\n"
 
-  std::cout << "3. Initialization:\n"
-            << "   - Pointers are typically initialized with the address of a "
-               "variable, using the address-of operator (&).\n"
-            << "   - Example: int var = 5; int* ptr = &var;\n\n";
+       << "   - Pointers are typically initialized with the address of a "
+          "variable, using the address-of operator (&).\n"
+       << "   - Example: int var = 5; int* ptr = &var;\n\n";
 
-  std::cout << "4. Dereferencing:\n"
-            << "   - Dereferencing a pointer means accessing the value at the "
-               "memory address stored in the pointer.\n"
-            << "   - Use the dereference operator (*) to access this value. "
-               "For example, *ptr gives the value of var.\n\n";
+  cout << "4. Dereferencing:\n"
+       << "   - Dereferencing a pointer means accessing the value at the "
+          "memory address stored in the pointer.\n"
+       << "   - Use the dereference operator (*) to access this value. "
+          "For example, *ptr gives the value of var.\n\n";
 
-  std::cout
-      << "5. Null Pointer:\n"
-      << "   - A null pointer points to nothing and is often used to indicate "
-         "that the pointer is not assigned to a valid memory address.\n"
-      << "   - In C++, nullptr is used to represent a null pointer.\n\n";
+  cout << "5. Null Pointer:\n"
+       << "   - A null pointer points to nothing and is often used to indicate "
+          "that the pointer is not assigned to a valid memory address.\n"
+       << "   - In C++, nullptr is used to represent a null pointer.\n\n";
 
-  std::cout << "6. Pointer Arithmetic:\n"
-            << "   - Pointers support arithmetic operations like addition and "
-               "subtraction.\n"
-            << "   - These operations consider the size of the data type the "
-               "pointer points to.\n\n";
+  cout << "6. Pointer Arithmetic:\n"
+       << "   - Pointers support arithmetic operations like addition and "
+          "subtraction.\n"
+       << "   - These operations consider the size of the data type the "
+          "pointer points to.\n\n";
 
-  std::cout << "7. Dynamic Memory Allocation:\n"
-            << "   - Pointers are used with new and delete operators for "
-               "allocating and deallocating memory dynamically.\n"
-            << "   - This is crucial for managing memory in programs where the "
-               "memory requirement is not known at compile time.\n\n";
+  cout << "7. Dynamic Memory Allocation:\n"
+       << "   - Pointers are used with new and delete operators for "
+          "allocating and deallocating memory dynamically.\n"
+       << "   - This is crucial for managing memory in programs where the "
+          "memory requirement is not known at compile time.\n\n";
 
-  std::cout << "8. Caution:\n"
-            << "   - Always ensure pointers are initialized before use.\n"
-            << "   - Be cautious with pointer arithmetic and ensure it's "
-               "within the bounds of the allocated memory.\n"
-            << "   - Remember to deallocate dynamically allocated memory to "
-               "prevent memory leaks.\n"
-            << "   - Prefer smart pointers (std::unique_ptr, std::shared_ptr) "
-               "over raw pointers in modern C++.\n\n";
+  cout << "8. Caution:\n"
+       << "   - Always ensure pointers are initialized before use.\n"
+       << "   - Be cautious with pointer arithmetic and ensure it's "
+          "within the bounds of the allocated memory.\n"
+       << "   - Remember to deallocate dynamically allocated memory to "
+          "prevent memory leaks.\n"
+       << "   - Prefer smart pointers (std::unique_ptr, std::shared_ptr) "
+          "over raw pointers in modern C++.\n\n";
   // regular integer
   cout << "\n----- Regular Integer -----" << endl;
   int num{10};
@@ -116,7 +115,6 @@ int main() {
   double *temp_ptr{nullptr};
 
   cout << "How many temperatures do you need? \n";
-  cin >> size;
 
   temp_ptr = new double[size]; // allocates that many spaces in memory
   cout << temp_ptr << endl;
@@ -131,25 +129,35 @@ int main() {
   int *score_ptr{scores};
   cout << "Value of score_ptr: " << score_ptr << endl;
 
-  cout << "\n- Array Subscript Notation -----" << endl;
+  cout << "\n--- Array Subscript Notation -----" << endl;
   cout << scores[0] << endl;
   cout << scores[1] << endl;
   cout << scores[2] << endl;
 
-  cout << "\n- Pointer Subscript Notation -----" << endl;
+  cout << "\n--- Pointer Subscript Notation -----" << endl;
   cout << score_ptr[0] << endl;
   cout << score_ptr[1] << endl;
   cout << score_ptr[2] << endl;
 
-  cout << "\n- Pointer Offset Notation -----" << endl;
+  cout << "\n--- Pointer Offset Notation -----" << endl;
   cout << *score_ptr << endl;
   cout << (*score_ptr + 1) << endl;
   cout << (*score_ptr + 2) << endl;
 
-  cout << "\n- Array Offset Notation -----" << endl;
+  cout << "\n--- Array Offset Notation -----" << endl;
   cout << *scores << endl;
   cout << (*scores + 1) << endl;
   cout << (*scores + 2) << endl;
+  cout << endl;
+
+  cout << "\n----- Pointer Arithmetic -----" << endl;
+  int scoreList[]{100, 95, 89, 68, -1};
+  int *scoreList_ptr{scoreList};
+
+  while (*scoreList_ptr != 89) { // loops through the array until -1 is seen
+    cout << *scoreList_ptr << " ";
+    scoreList_ptr++;
+  }
 
   return 0;
 }

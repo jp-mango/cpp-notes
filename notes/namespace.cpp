@@ -1,6 +1,8 @@
 #include <iostream>
+
 using namespace std;
-//! Namespace
+
+// Namespace
 namespace first {
 string x = "this is the first namespace\n";
 }
@@ -23,9 +25,6 @@ int main() {
 
   cout << x; // will default to second
 
-  cout << "'using std::cout' allows short-hand print statements\n";
-  string shortHand =
-      "'using std::string' allows for shorthand string statements\n";
-  cout << shortHand;
+  cout << "'using namespace std allows short-hand print statements\n";
   return 0;
 }

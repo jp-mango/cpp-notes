@@ -1,5 +1,8 @@
 #include <iostream>
-//! Arithmetic Operations
+
+using namespace std;
+
+// Arithmetic Operations
 int main() {
   // return the result of a specific operation ('+', '-', '*', '/')
 
@@ -22,8 +25,8 @@ int main() {
   //* Remainder
   int rem = students % 2; // if remainder 1, number is odd. 0 = even.
 
-  std::cout << "Students: " << students << "\n";
-  std::cout << "Remainder: " << rem << "\n";
+  cout << "Students: " << students << "\n";
+  cout << "Remainder: " << rem << "\n";
 
   return 0;
 }

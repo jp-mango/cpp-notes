@@ -1,6 +1,8 @@
 #include <iostream>
+
 using namespace std;
-//! Basic data types in C++.
+
+// Basic data types in C++.
 int main() {
   //* Integers (whole number) - decimals will be truncated
   int age = 26;

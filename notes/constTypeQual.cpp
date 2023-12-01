@@ -1,6 +1,8 @@
 #include <iostream>
+
 using namespace std;
-//! Const
+
+// Constants
 int main() {
   // The const keyword specifies that a variables value
   // will not change, making if effectively read-only.

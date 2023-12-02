@@ -4,10 +4,14 @@ using namespace std;
 
 // Defining a class
 class Car {
-  // Private data members
+  // attributes
   string brand;
   string model;
   int year;
+
+  // methods
+  // can insert any methods required by the class
+  //
 
 public:
   // Constructor
@@ -58,6 +62,5 @@ int main() {
   cout << "7. Accessor and Mutator functions (getters and setters) provide "
           "controlled access to private members.\n";
   cout << "8. Objects are instances of a class.\n";
-
   return 0;
 }
